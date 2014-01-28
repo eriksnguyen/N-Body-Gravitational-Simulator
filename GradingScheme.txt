@@ -1,0 +1,59 @@
+25% Physics Engine (OpenCL)
+25% Visualization (OpenGL)
+15% Unit Testing
+15% Software Dev Process
+10% Interactivity (move with mouse/keyboard, zoom, etc; input formats, etc)
+10% Do something cool (creativity, make it interesting, use cool libraries, space mouse)
+
+Each can gain 5% more if done exceptionally well.
+
+PHYSICS ENGINE REQ:
+	- wrap all code in namespace (Notice, there isn't a semicolon.):
+		namespace nbody{
+
+		} //namespace nbody
+
+	- 'Simulation' class in namespace
+		class Simulation{
+			//Whatever
+		public:
+			void loadRun(std::istream);
+			void saveRun(std::ostream) const;
+			void evolveSystemFor(double timeInSeconds);
+			//Whatever else we need
+		};
+
+	- File format for input/output:
+		N //number of bodies
+		r0_x r0_y r0_z v0_x v0_y v0_z a0_x a0_y a0_z m0 # 
+		r1_x r1_y . . .
+		.
+		.
+		.
+
+SOFTWARE DEV REQ:
+	- Submit code review to Andre by Wednesday (the standards document can be used for reference.)
+		- 30->100 lines w/ comments in code by reviewer.
+		- summary (things done well, things done poorly, etc.)
+
+Things to talk to team about:
+	- what OS/setup are we supporting (clang, gcc, visual studio, etc)
+	- what version control system are we using? 
+	- Physics engine:
+		- how are we integrating time? (newtonian, runge-kutta, hermite, etc.)
+		- how do we "plug & play" integration schemes (basically be able to plug in any scheme and have it work)
+		- how to test the physics accuracy?
+		- what other properties might need to be added?
+			- color, size (little bit nasty honestly...) etc
+	- how will visualization interact with model?
+		- click = new point?
+
+Use Agile development scheme.
+	- code small, make it work with unit tests
+	- refine, refactor, repeat
+
+Goals to keep in mind
+	- easy to use
+	- interactive
+	- Looks good
+	- DUE SATURDAY BY 6PM
