@@ -25,7 +25,7 @@ namespace nbody {
           interactBodies( i, j, _softFactor, acc );
         }
       }
-      _body[i].force() = acc;
+      _body[i].accel() = acc;
     }
   }
 
@@ -34,7 +34,7 @@ namespace nbody {
     for( size_t i = 0; i < _nBodies; ++i ) {
       r = _body[i].position();
       v = _body[i].velocity();
-      a = _body[i].force();
+      a = _body[i].accel();
 
       v = v + ( a * dt );
       v = v * _dampingFactor;
