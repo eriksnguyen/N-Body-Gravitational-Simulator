@@ -30,18 +30,9 @@ namespace nbody {
 	}
 
 	void System::integrateSystem( float dt ) {
-		Vector3f r, v, a;
 		for( size_t i = 0; i < _nBodies; ++i ) {
-			r = _body[i].position();
-			v = _body[i].velocity();
-			a = _body[i].accel();
-
-			v = v + ( a * dt );
-			v = v * _dampingFactor;
-			r = r + v * dt;
-
-			_body[i].position() = r;
-			_body[i].velocity() = v;
+			//Call upon the integration scheme to update the body
+			_integrationScheme->updateBody( _body[i], dt, _dampingFactor);
 		}
 	}
 
