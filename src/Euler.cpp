@@ -11,9 +11,9 @@ namespace nbody{
 		v = body.velocity();
 		a = body.accel();
 
-      	r = r + v * dt;//Update position before updating velocity
 		v = v + ( a * dt );
       	v = v * dampingFactor;
+		r = r + v * dt;
 
       	body.position() = r;
       	body.velocity() = v;
