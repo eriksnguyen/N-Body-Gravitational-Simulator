@@ -1,8 +1,8 @@
 #ifndef _NBODY_INTEGRATOR_EULER_H
 #define _NBODY_INTEGRATOR_EULER_H
 
-#include <nbody/body.h>
 #include <nbody/integrator.h>
+#include <nbody/body.h>
 
 namespace nbody{
 
@@ -13,8 +13,8 @@ namespace nbody{
 	public:
 		Euler() {}
 		~Euler() {}
-		updateBody( Body& body, float dt );
 
+		void updateBody( Body& body, float dt, float dampingFactor );
 	};
 
 } // namespace nbody

@@ -14,7 +14,7 @@ namespace nbody{
 	public:
 		Integrator() {};
 		virtual ~Integrator() = 0;
-		virtual updateBody( Body& body, float dt, float dampingFactor ) = 0;
+		virtual void updateBody( Body& body, float dt, float dampingFactor ) = 0;
 	};
 } // namespace nbody
 
