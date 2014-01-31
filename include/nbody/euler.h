@@ -7,9 +7,6 @@
 namespace nbody{
 
 	class Euler : public Integrator{
-		Euler(const Euler& integrator) = 0;
-		Euler& operator= (Euler integrator) = 0;
-
 	public:
 		Euler() {}
 		~Euler() {}

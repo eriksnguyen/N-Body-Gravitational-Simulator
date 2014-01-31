@@ -7,8 +7,6 @@
 namespace nbody{
 
 	class RungeKutta : public Integrator {
-		RungeKutta( const RungeKutta& integrator ) = delete;
-		RungeKutta& operator= ( RungeKutta integrator ) = delete;
 
 	public:
 		RungeKutta() {}

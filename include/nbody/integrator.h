@@ -8,8 +8,6 @@ namespace nbody{
 	* Defines an abstract class that moves given particles through time steps.
 	*/
 	class Integrator{
-		Integrator(const Integrator& integrator) = 0;
-		Integrator& operator= (Integrator integrator) = 0;
 
 	public:
 		Integrator() {};

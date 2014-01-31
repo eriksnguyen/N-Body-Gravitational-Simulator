@@ -5,7 +5,7 @@
 namespace nbody{
 
 	void Euler::updateBody( Body& body, float dt, float dampingFactor ) {
-		Vector3 r, v, a;
+		Vector3f r, v, a;
 
 		r = body.position();
 		v = body.velocity();

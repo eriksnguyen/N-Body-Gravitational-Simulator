@@ -3,8 +3,8 @@
 
 #include <nbody/Vector3.h>
 #include <nbody/Body.h>
-#include <nbody/integrator>
-#include <nbody/euler>
+#include <nbody/integrator.h>
+#include <nbody/euler.h>
 
 #include <iosfwd>
 #include <string>
@@ -14,7 +14,7 @@ namespace nbody {
 	class System {
 		size_t _nBodies;
 		Body* _body;
-		Integrator* integrationScheme;
+		Integrator* _integrationScheme;
 		float _softFactor = 1e-9f; //TODO: Change this to put into the calculations of distance
 		float _dampingFactor = 1.0f;
 
@@ -23,10 +23,10 @@ namespace nbody {
 		System& operator=( const System &sys ) = delete;
 		
 	public:
-		System( size_t N ) : _nBodies{N}, _body{ new Body[N] }, integrationScheme{new Euler()} { initRandomState(); }
-		System( std::istream &input ) : _nBodies{}, _body{nullptr}, integrationScheme{new Euler()}  { readState( input ); }
-		System( std::string filename ) : _nBodies{}, _body{nullptr}, integrationScheme{new Euler()}  { readState( filename ); }
-		~System() { delete [] _body; delete integrationScheme}
+		System( size_t N ) : _nBodies{N}, _body{ new Body[N] }, _integrationScheme{new Euler()} { initRandomState(); }
+		System( std::istream &input ) : _nBodies{}, _body{nullptr}, _integrationScheme{new Euler()}  { readState( input ); }
+		System( std::string filename ) : _nBodies{}, _body{nullptr}, _integrationScheme{new Euler()}  { readState( filename ); }
+		~System() { delete [] _body; delete _integrationScheme; }
 
 		void interactBodies( size_t i, size_t j, float softFactor, Vector3f &acc ) const;
 		void computeGravitation();
