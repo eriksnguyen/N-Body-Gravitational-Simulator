@@ -4,7 +4,7 @@
 
 namespace nbody{
 
-	void updateBody( Body& body0, float dt, float dampingFactor ){
+	void updateBody( Body& body, float dt, float dampingFactor ){
 	  Vector3f r, v, a, k1, k2, k3, k4;
 	  /* Body BodyArray[5];
 	  BodyArray[0] = body0;
