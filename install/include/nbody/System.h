@@ -15,17 +15,17 @@ namespace nbody {
 		size_t _nBodies;
 		Body* _body;
 		Integrator* _integrationScheme;
-		float _softFactor = 1e-9f; //TODO: Change this to put into the calculations of distance
-		float _dampingFactor = 1.0f;
+		float _softFactor; //TODO: Change this to put into the calculations of distance
+		float _dampingFactor;
 
 		System() = delete;
 		System( const System &sys ) = delete;
 		System& operator=( const System &sys ) = delete;
 		
 	public:
-		System( size_t N ) : _nBodies{N}, _body{ new Body[N] }, _integrationScheme{new Euler()} { initRandomState(); }
-		System( std::istream &input ) : _nBodies{}, _body{nullptr}, _integrationScheme{new Euler()}  { readState( input ); }
-		System( std::string filename ) : _nBodies{}, _body{nullptr}, _integrationScheme{new Euler()}  { readState( filename ); }
+		System( size_t N ) : _nBodies{N}, _body{ new Body[N] }, _integrationScheme{new Euler()}, _softFactor{1e-9f}, _dampingFactor{1.0f} { initRandomState(); }
+		System( std::istream &input ) : _nBodies{}, _body{nullptr}, _integrationScheme{new Euler()}, _softFactor{1e-9f}, _dampingFactor{1.0f} { readState( input ); }
+		System( std::string filename ) : _nBodies{}, _body{nullptr}, _integrationScheme{new Euler()}, _softFactor{1e-9f}, _dampingFactor{1.0f}  { readState( filename ); }
 		~System() { delete [] _body; delete _integrationScheme; }
 
 		void interactBodies( size_t i, size_t j, float softFactor, Vector3f &acc ) const;

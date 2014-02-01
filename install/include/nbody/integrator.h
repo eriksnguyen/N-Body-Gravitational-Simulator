@@ -1,7 +1,7 @@
 #ifndef _NBODY_INTEGRATOR_H
 #define _NBODY_INTEGRATOR_H
 
-#include <nbody/body.h>
+#include <nbody/Body.h>
 
 namespace nbody{
 	/**

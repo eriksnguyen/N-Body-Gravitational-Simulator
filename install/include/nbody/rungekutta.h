@@ -2,7 +2,7 @@
 #define _NBODY_INTEGRATOR_RUNGEKUTTA_H
 
 #include <nbody/integrator.h>
-#include <nbody/body.h>
+#include <nbody/Body.h>
 
 namespace nbody{
 
