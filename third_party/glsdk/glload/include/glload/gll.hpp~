@@ -26,7 +26,7 @@ namespace glload
 	{
 		LS_LOAD_FUNCTIONS_ALL,		///<All function pointers defined for each extension have been loaded.
 		LS_LOAD_FUNCTIONS_SOME,		///<Only some of the function pointers defined for each extension have been loaded.
-		LS_LOAD_FAILED				///<Function loading failed. Things were reset to nothing being loaded.
+		LS_LOAD_FAILED,				///<Function loading failed. Things were reset to nothing being loaded.
 	};
 
 	/**
