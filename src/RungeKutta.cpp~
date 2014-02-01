@@ -1,6 +1,6 @@
 #include <nbody/rungekutta.h>
 #include <nbody/Vector3.h>
-#include <nbody/body.h>
+#include <nbody/Body.h>
 
 namespace nbody{
 
