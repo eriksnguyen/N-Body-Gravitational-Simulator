@@ -1,3 +1,4 @@
-System.o build/nbody/System.d : src/System.cpp include/nbody/constants.h include/nbody/System.h \
- include/nbody/Vector3.h include/nbody/Body.h include/nbody/integrator.h \
- include/nbody/euler.h
+System.o build/nbody/System.d : src/System.cpp install/include/nbody/constants.h \
+ install/include/nbody/System.h install/include/nbody/Vector3.h \
+ install/include/nbody/Body.h install/include/nbody/integrator.h \
+ install/include/nbody/euler.h

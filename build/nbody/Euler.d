@@ -1,2 +1,3 @@
-Euler.o build/nbody/Euler.d : src/Euler.cpp include/nbody/euler.h include/nbody/integrator.h \
- include/nbody/Body.h include/nbody/Vector3.h
+Euler.o build/nbody/Euler.d : src/Euler.cpp install/include/nbody/euler.h \
+ install/include/nbody/integrator.h install/include/nbody/Body.h \
+ install/include/nbody/Vector3.h
