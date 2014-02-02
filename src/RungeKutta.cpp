@@ -10,9 +10,9 @@ namespace nbody{
 	  BodyArray[0] = body0;
 	  float kv[4];
 	  float kr[4];*/
-		r = body0.position();
-		v = body0.velocity();
-		a = body0.accel();
+		r = body.position();
+		v = body.velocity();
+		a = body.accel();
 		/*kv[0] = a0;
 		kr[0] = v0;
 		for ( int i = 1; i < 5; ++i){
