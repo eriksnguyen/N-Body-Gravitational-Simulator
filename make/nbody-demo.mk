@@ -20,6 +20,7 @@ OBJECTS_PROJ_DEMO := \
 	$(BUILD_DIR_PROJ_DEMO)/main.o \
 	$(BUILD_DIR_PROJ_DEMO)/GlutWrapper.o \
 	$(BUILD_DIR_PROJ_DEMO)/Shaders.o \
+	$(BUILD_DIR_PROJ_DEMO)/NBodyWindow.o \
 	#$(BUILD_DIR_PROJ_DEMO)/otherFiles.o \
 	#$(BUILD_DIR_PROJ_DEMO)/moreOtherFiles.o \
 ## Add any more files you like!

@@ -1,5 +1,5 @@
-main.o build/nbody-demo/main.d : src/demo/main.cpp src/demo/GlutWrapper.h \
- third_party/glsdk/glload/include/glload/gl_3_0.h \
+NBodyWindow.o build/nbody-demo/NBodyWindow.d : src/demo/NBodyWindow.cpp src/demo/NBodyWindow.h \
+ src/demo/GlutWrapper.h third_party/glsdk/glload/include/glload/gl_3_0.h \
  third_party/glsdk/glload/include/glload/_int_gl_type.h \
  third_party/glsdk/glload/include/glload/_int_gl_exts.h \
  third_party/glsdk/glload/include/glload/_int_gl_1_1.h \
@@ -21,5 +21,4 @@ main.o build/nbody-demo/main.d : src/demo/main.cpp src/demo/GlutWrapper.h \
  third_party/glsdk/glload/include/glload/gll.hpp \
  third_party/freeglut/include/GL/freeglut.h \
  third_party/freeglut/include/GL/freeglut_std.h \
- third_party/freeglut/include/GL/freeglut_ext.h src/demo/NBodyWindow.h \
- src/demo/Shaders.h
+ third_party/freeglut/include/GL/freeglut_ext.h

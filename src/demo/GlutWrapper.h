@@ -1,3 +1,6 @@
+#ifndef GLUTWRAPPER_H
+#define GLUTWRAPPER_H
+
 #include <glload/gl_3_0.h>
 #include <glload/gll.hpp>
 #include <GL/freeglut.h>
@@ -55,3 +58,5 @@ public:
 private:
   Mode _debugMode;
 };
+
+#endif // GLUTWRAPPER_H
