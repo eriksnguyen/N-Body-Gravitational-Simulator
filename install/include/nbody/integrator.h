@@ -10,8 +10,8 @@ namespace nbody{
 	class Integrator{
 
 	public:
-		Integrator() {};
-		virtual ~Integrator() = 0;
+		Integrator() {}
+		virtual ~Integrator() {};
 		virtual void updateBody( Body& body, float dt, float dampingFactor ) = 0;
 	};
 } // namespace nbody
