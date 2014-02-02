@@ -5,7 +5,7 @@
 
 int main() {
   try {
-    std::ifstream input{ "resources/nbody/binary-system-simple.txt" };
+    std::ifstream input{ "resources/nbody/large-number-of-particles.txt" };
     nbody::Simulation sim{input};
     for( int i = 0; i < 40; ++i ) {
       std::cout << "==EVOLUTION " << i + 1 << "\n";

@@ -1,12 +1,22 @@
-#include <nbody/Vector3.h>
-#include <nbody/Body.h>
-#include <cstdio>
+#include <sstream>
+#include <fstream>
+#include <cstdlib>
 
-void generateRandomParticles(){
-	Body bodyArray[1024];
-	for ( i = 0; i < 1024; ++i ){
-		bodyArray[i].position() = (float)rand()/(float)(RAND_MAX) * 20 - 10;
-		bodyArray[i].velocity() = (float)rand()/(float)(RAND_MAX) * 2 - 1;
-		bodyArray[i].accel() = 0;
+int main(){
+	std::ostream output{"large-number-of-particles.txt"};
+	output << 1024 << "\n";
+	for(int i = 0; i < 1024; ++i){
+		for(int j = 0; j < 3; j++){
+			output << static_cast <float> (rand())/ static_cast<float>(RAND_MAX) * 20 - 10 << " ";
+		}
+		for(int j = 0; j < 3; j++){
+			output << static_cast <float> (rand())/ static_cast<float>(RAND_MAX) * 2 - 1 << " ";
+		}
+		for(int j = 0; j < 3; ++j){
+			output << 0.0 << " ";
+		}
+		output << 1.0 << "\n";
 	}
+
+	return 0;
 }
