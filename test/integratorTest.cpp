@@ -164,21 +164,3 @@ TEST( integratorTest, RK4Integration3 ){
 	ASSERT_TRUE( (pos_calc - body.position()).norm() <= pos_calc.norm() * 0.01f );
 	
 }
-
-int main() {
-
-	std::ofstream output{ "integrator_test.out" };
-	output << std::fixed;
-	output << std::scientific;
-	output << std::setprecision( 8 );
-	
-	TEST( integratorTest, eulerIntegration0 );
-	TEST( integratorTest, eulerIntegration1 );
-	TEST( integratorTest, eulerIntegration2 );
-	TEST( integratorTest, eulerIntegration3 );
-	TEST( integratorTest, RK4Integration0 );
-	TEST( integratorTest, RK4Integration1 );
-	TEST( integratorTest, RK4Integration2 );
-	TEST( integratorTest, RK4Integration3 );
-	
-}
