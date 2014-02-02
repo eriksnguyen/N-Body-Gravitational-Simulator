@@ -1,12 +1,11 @@
 #include <nbody/Vector3.h>
 #include <nbody/Body.h>
 #include <nbody/integrator.h>
-#include <nbody/euler.h>
+#include <nbody/rungekutta.h>
 #include <gtest/gtest.h>
 
-
-TEST( integratorTest, eulerIntegration0 ){
-	auto integrationScheme = nbody::Euler{};
+TEST( rungekuttaTest, RK4Integration0 ){
+	auto integrationScheme = nbody::RungeKutta{};
 	auto body = nbody::Body{};
 	//Initial conditions
 	body.position() = Vector3f{ 0, 0, 0 };
@@ -22,10 +21,12 @@ TEST( integratorTest, eulerIntegration0 ){
 	std::cout << "ideal position" << pos_calc << "\n";
 	
 	ASSERT_TRUE( (pos_calc - body.position()).norm() <= pos_calc.norm() * 0.01f );
+	
 }
 
-TEST( integratorTest, eulerIntegration1 ){
-	auto integrationScheme = nbody::Euler{};
+
+TEST( rungekuttaTest, RK4Integration1 ){
+	auto integrationScheme = nbody::RungeKutta{};
 	auto body = nbody::Body{};
 	//Initial conditions
 	body.position() = Vector3f{ 0, 0, 0 };
@@ -44,8 +45,8 @@ TEST( integratorTest, eulerIntegration1 ){
 	
 }
 
-TEST( integratorTest, eulerIntegration2 ){
-	auto integrationScheme = nbody::Euler{};
+TEST( rungekuttaTest, RK4Integration2 ){
+	auto integrationScheme = nbody::RungeKutta{};
 	auto body = nbody::Body{};
 	//Initial conditions
 	body.position() = Vector3f{ 1, 0, 0 };
@@ -64,8 +65,8 @@ TEST( integratorTest, eulerIntegration2 ){
 	
 }
 
-TEST( integratorTest, eulerIntegration3 ){
-	auto integrationScheme = nbody::Euler{};
+TEST( rungekuttaTest, RK4Integration3 ){
+	auto integrationScheme = nbody::RungeKutta{};
 	auto body = nbody::Body{};
 	//Initial conditions
 	body.position() = Vector3f{ 1, 0, 0 };
@@ -81,4 +82,5 @@ TEST( integratorTest, eulerIntegration3 ){
 	std::cout << "ideal position" << pos_calc << "\n";
 	
 	ASSERT_TRUE( (pos_calc - body.position()).norm() <= pos_calc.norm() * 0.01f );
+	
 }

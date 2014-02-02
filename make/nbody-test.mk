@@ -19,6 +19,8 @@ OBJECTS_PROJ_TEST := \
 	$(BUILD_DIR_PROJ_TEST)/gtest-all.o \
 	$(BUILD_DIR_PROJ_TEST)/$(PROJ_NAME)-test.o \
 	$(BUILD_DIR_PROJ_TEST)/vectorTest.o \
+	$(BUILD_DIR_PROJ_TEST)/integratorTest.o \
+	$(BUILD_DIR_PROJ_TEST)/rungekuttaTest.o \
 	#$(BUILD_DIR_PROJ_TEST)/add-more.o \
 	#$(BUILD_DIR_PROJ_TEST)/unit-tests.o \
 	#$(BUILD_DIR_PROJ_TEST)/right-here!.o \
